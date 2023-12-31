@@ -1,0 +1,128 @@
+:root {
+  --primary-color: #A0D7FF;
+  --secondary-color: rgba(255, 255, 255, 0.5);
+  ;
+}
+
+body {
+  background: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  background-color: #109DFF;
+  width: 374px;
+  height: 374px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  border: 2px solid #0882d8;
+  bottom: 100px;
+}
+
+.container {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 62px 62px 62px 62px;
+  grid-template-rows: 150px 62px 62px 62px 62px 62px;
+  place-content: center;
+  gap: 10px;
+  padding: 20px 30px;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+}
+
+button {
+  height: 62px;
+  padding: 6px 4px;
+  text-align: center;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: linear-gradient(126deg, rgba(255, 255, 255, 0.60) -9.41%, rgba(255, 255, 255, 0.40) 109.25%);
+  backdrop-filter: blur(6px);
+  color: rgb(155, 152, 152);
+  font-size: x-large;
+}
+
+
+.display {
+  grid-area: 1 / 1 / 2 / 5;
+  margin-bottom: 70px;
+  height: 100px;
+  padding-right: 20px;
+}
+
+.display input {
+  padding: 20px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: right;
+  font-size: 48px;
+  font-weight: 500;
+  color: #262626;
+}
+
+.first {
+  grid-area: 2 / 1 / 3 / 4;
+  display: grid;
+  grid-template-columns: 64px 64px 64px;
+  gap: 10px;
+}
+
+.first button, .right button {
+  color:var(--primary-color)
+}
+
+.first > button, .nums > button, .right > button, .buttom > button{
+  padding: 6px 4px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.60) -9.69%, rgba(255, 255, 255, 0.40) 114.23%);
+  backdrop-filter: blur(6px);
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.nums {
+  grid-area: 3 / 1 / 5 / 4;
+  display: grid;
+  grid-template-columns: 64px 64px 64px;
+  gap: 10px;
+}
+
+.nums button{
+  color: white;
+}
+
+.zero {
+  color: white;
+}
+
+.right {
+  grid-area: 2 / 4 / 7 / 5;
+  display: grid;
+  grid-row: 64px 64px 1fr 1fr;
+  gap: 10px;
+}
+
+.plus, .equal {
+  height: 96px;
+}
+
+.buttom {
+  grid-area: 6 / 1 / 7 /4;
+  display: grid;
+  grid-template-columns: 1fr 64px;
+  gap: 10px
+}
+
+div .equal{
+  background-color: #0882d8;
+  color: white;
+}
