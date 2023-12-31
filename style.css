@@ -28,7 +28,7 @@ body {
   height: 700px;
   display: grid;
   grid-template-columns: 62px 62px 62px 62px;
-  grid-template-rows: 150px 62px 62px 62px 62px 62px;
+  grid-template-rows: min 62px 62px 62px 62px 62px;
   place-content: center;
   gap: 10px;
   padding: 20px 30px;
@@ -52,14 +52,17 @@ button {
 .display {
   grid-area: 1 / 1 / 2 / 5;
   margin-bottom: 70px;
-  height: 100px;
   padding-right: 20px;
 }
 
-.display input {
+.display .displaycalc {
   padding: 20px;
   width: 100%;
+  height: auto;
+  overflow-wrap: break-word;
   background-color: transparent;
+  overflow: auto;
+  resize: none; 
   border: none;
   outline: none;
   text-align: right;
@@ -68,15 +71,16 @@ button {
   color: #262626;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
+
 .first {
   grid-area: 2 / 1 / 3 / 4;
   display: grid;
   grid-template-columns: 64px 64px 64px;
   gap: 10px;
-}
-
-.first button, .right button {
-  color:var(--primary-color)
 }
 
 .first > button, .nums > button, .right > button, .buttom > button{
@@ -87,6 +91,11 @@ button {
   backdrop-filter: blur(6px);
   font-size: 32px;
   font-weight: 500;
+}
+
+.first button, .right button {
+  color:var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 .nums {
@@ -125,4 +134,17 @@ button {
 div .equal{
   background-color: #0882d8;
   color: white;
+}
+
+button{
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.9);
+  transition: transform 0.05s ease-in-out;
 }
