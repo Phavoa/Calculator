@@ -98,7 +98,10 @@ function calculateArray() {
       }
     } else {
       console.error('Invalid token in the expressionArray');
-      return NaN;
+      
+      return "invalid";
+      expressionArray = [];
+     
     }
   }
 

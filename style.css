@@ -148,3 +148,9 @@ button:active {
   transform: scale(0.9);
   transition: transform 0.05s ease-in-out;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  font-size: x-large;
+}
